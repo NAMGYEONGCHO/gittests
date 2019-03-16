@@ -31,6 +31,27 @@ And then:
 // This is not only useful if you are working with someone else
 // but also if you are working from differente places
 
+Pull is shortcut/combination for:
+git fetch
+git merge
+
+master
+fixesBranch // lets merge fixesBranch into master
+
+// Now you are on master and you want to merge that branch
+git fetch origin fixesBranch
+git merge fixesBranch
+
+// or!
+git pull origin fixesBranch
+
+// Lets suppose that first you need to check if fixesBranch is ok
+// You are on master'lets change to fixesBranch
+git checkout fixesBranch
+git pull origin fixesBranch
+// now you take a look to the new changes, and if everything is fine
+// you go back to master to merge the branch
+git checkout master && git merge fixesBranch
 
 This is very similar to git pull and git merge:
 - git pull origin master
@@ -43,3 +64,4 @@ To push your local branch to the repo:
 The recommendation is to open a new branch when you want to add a new functionality to your app!
 Try this :)
 
+And add some content at the end
